@@ -1,0 +1,4 @@
+<h1><%= @pet.name %></h1>
+<p><%= @pet.specie %> <%= @pet.phone %></p>
+
+<%= link_to 'Back to pets', pets_path %> | <%= link_to 'Edit', edit_pet_path(@pet)  %> | <%= link_to 'supprimer', pet_path(@pet), method: :delete %>

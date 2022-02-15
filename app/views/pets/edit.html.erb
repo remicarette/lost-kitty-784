@@ -1,0 +1,9 @@
+<h1>Edit my <%= @pet.name %></h1>
+
+  <%= simple_form_for(@pet) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :specie, collection: Pet::SPECIES %>
+    <%= f.input :phone %>
+    <%= f.input :lost %>
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>

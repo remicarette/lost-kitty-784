@@ -1,0 +1,10 @@
+<h1>List of lost pets</h1>
+
+<%= link_to 'create a pet', new_pet_path, class: "btn btn-primary" %>
+
+<% @pets.each do |pet| %>
+
+  <%= link_to pet_path(pet) do   %>
+    <div><%= pet.name %> <%= pet.specie %></div>
+  <% end %>
+<% end %>
